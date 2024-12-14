@@ -16,8 +16,8 @@ class ThemeManager {
     // Background and text colors
     scaffoldBackgroundColor: Colors.white, // White background for light mode
     colorScheme: const ColorScheme.light(
-      background: Colors.white,
-      onBackground: Colors.black,
+      surface: Colors.white,
+      onSurface: Colors.black,
     ),
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
@@ -55,9 +55,9 @@ class ThemeManager {
     ),
     // Background and text colors
     scaffoldBackgroundColor: Colors.black, // Dark background for dark mode
-    colorScheme: ColorScheme.dark(
-      background: Colors.black,
-      onBackground: Colors.white,
+    colorScheme: const ColorScheme.dark(
+      surface: Colors.black,
+      onSurface: Colors.white,
     ),
     textTheme: const TextTheme(
       bodyLarge: TextStyle(

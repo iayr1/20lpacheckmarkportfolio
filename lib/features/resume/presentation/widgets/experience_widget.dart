@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ExperienceWidget extends StatelessWidget {
+  const ExperienceWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +17,7 @@ class ExperienceWidget extends StatelessWidget {
           title: Text('Full Stack Developer at Shareshiksha'),
           subtitle: Text('November 2023 - May 2024'),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
       ],
     );
   }

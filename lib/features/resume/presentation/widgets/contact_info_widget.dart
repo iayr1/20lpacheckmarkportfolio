@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ContactInfoWidget extends StatelessWidget {
+  const ContactInfoWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

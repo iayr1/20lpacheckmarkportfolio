@@ -108,6 +108,8 @@ import 'package:flutter/material.dart';
 
 
 class AppGridScreen extends StatefulWidget {
+  const AppGridScreen({super.key});
+
   @override
   _AppGridScreenState createState() => _AppGridScreenState();
 }
@@ -125,12 +127,12 @@ class _AppGridScreenState extends State<AppGridScreen> {
     return Scaffold(
       appBar: AppBar(
         title: TextField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             hintText: 'Search apps...',
             border: InputBorder.none,
             hintStyle: TextStyle(color: Colors.white70),
           ),
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           onChanged: (query) {
             setState(() {
               searchQuery = query;
@@ -142,7 +144,7 @@ class _AppGridScreenState extends State<AppGridScreen> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
@@ -165,13 +167,13 @@ class _AppGridScreenState extends State<AppGridScreen> {
                     radius: 40,
                     child: Text(
                       appName.substring(0, 1),
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     appName,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
@@ -187,7 +189,7 @@ class _AppGridScreenState extends State<AppGridScreen> {
 class AppDetailScreen extends StatelessWidget {
   final String appName;
 
-  const AppDetailScreen({required this.appName});
+  const AppDetailScreen({super.key, required this.appName});
 
   @override
   Widget build(BuildContext context) {
@@ -196,7 +198,7 @@ class AppDetailScreen extends StatelessWidget {
       body: Center(
         child: Text(
           appName,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
     );
